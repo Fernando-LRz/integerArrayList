@@ -35,11 +35,11 @@ bool List::isFull() {
 
 void List::insertElement(const int& position, const int& element) {
     if(isFull()) {
-        throw ListException("insertElement: The list is full; no more elements can be inserted.");
+        throw ListException("[insertElement] The list is full; no more elements can be inserted.");
     }
 
     if(position != -1 and !isValidPosition(position)) {
-        throw ListException("insertElement: The position is invalid.");
+        throw ListException("[insertElement] The position is invalid.");
     }
 
     int i(last);
@@ -54,7 +54,7 @@ void List::insertElement(const int& position, const int& element) {
 
 void List::deleteElement(const int& position) {
     if(!isValidPosition(position)) {
-        throw ListException("deleteElement: The position is invalid.");
+        throw ListException("[deleteElement] The position is invalid.");
     }
 
     int i(last);
@@ -96,7 +96,7 @@ int List::getNextPosition(const int& position) {
 
 int List::getElement(const int& position) {
     if(!isValidPosition(position)) {
-        throw ListException("getElement: The position is invalid.");
+        throw ListException("[getElement] The position is invalid.");
     }
 
     return data[position];

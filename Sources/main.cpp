@@ -24,8 +24,16 @@ int main() {
     cout << endl << endl;
     
     cout << "List contents ..." << endl;
-    
     cout << myList.toString() << endl;
+
+    cout << "Element at position 19: " << myList.getElement(19) << endl << endl;
+
+    cout << "Inserting an element at an invalid position..." << endl;
+    try {
+        myList.insertElement(100, 1899);
+    } catch(ListException e) {
+        cout << "Something went wrong: " << e.what() << endl;
+    }
     
     cout << endl << endl;
 }
