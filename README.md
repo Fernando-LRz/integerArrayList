@@ -1,5 +1,5 @@
 # Integer Array List
-A simple C++ implementation of a fixed-size array-based list to store integers.
+C++ implementation of a fixed-size array-based list to store integers.
 
 ## Build and Run
 
